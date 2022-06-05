@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 6px;
+  border: none;
+  color: var(--White);
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--DarkBlue);
+  background-color: var(--NeturalLight);
+  color: var(--DarkBlue);
+  font-weight: bold;
+}

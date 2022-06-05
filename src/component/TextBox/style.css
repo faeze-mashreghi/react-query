@@ -1,0 +1,23 @@
+.text-box-box {
+  width: 100%;
+  display: flex;
+}
+.text-box-box input {
+  padding: 0;
+  line-height: 2;
+  border: 1px solid var(--DarkBlue);
+  height: 25px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.text-box-box > label {
+  color: var(--DarkBlue);
+  text-align: left;
+  padding-left: 10px;
+  font-weight: bold;
+  width: 30%;
+}
+.text-box-box > .div-input-valid {
+  width: 70%;
+}

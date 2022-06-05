@@ -1,0 +1,18 @@
+.form-signup {
+  padding: 100px 0;
+}
+.signup-box {
+  width: 30%;
+  margin: auto;
+  border: 1px solid var(--NeturalDrak);
+  border-radius: 4px;
+  text-align: center;
+  padding: 5% 40px;
+}
+
+.signup-box > * {
+  margin-top: 10px;
+}
+.btn.submit-signup {
+  margin-right: 50%;
+}
