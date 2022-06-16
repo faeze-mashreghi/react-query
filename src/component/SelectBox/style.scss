@@ -1,0 +1,13 @@
+@import "../../style/main.scss";
+.select-box-box {
+  label {
+    color: $blue;
+  }
+  .select-box__control {
+    border: none;
+    @include border-bottom;
+  }
+  .select-box__control--is-focused {
+    border: none;
+  }
+}

@@ -1,0 +1,19 @@
+@import "./variables.scss";
+@mixin border-bottom {
+  border-bottom: 1px solid $netural-light;
+}
+
+@mixin backGround-color-modifiers {
+  @each $name, $hex in $colors {
+    &-#{$name} {
+      background-color: $hex;
+    }
+  }
+}
+@mixin height-modifiers {
+  @each $name, $hex in $size {
+    &-#{$name} {
+      height: $hex;
+    }
+  }
+}

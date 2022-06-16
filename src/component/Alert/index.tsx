@@ -1,17 +1,17 @@
 import { FC } from "react";
-import "./style.css";
+import "./style.scss";
 interface AlertProps {
   variant: "success" | "error";
 }
 export const statusMessage = {
-  success: "عملیات با موفقیت انجام شد ",
-  error: "مشکلی به وجود آمده",
+  success: "successful ",
+  error: "something went wrong",
 };
 
 const Alert: FC<AlertProps> = ({ variant }) => {
   return (
     <>
-      <div className={`alert ${variant}`}>
+      <div className={`alert alert-${variant}`}>
         <strong>{statusMessage[variant!]}</strong>
       </div>
     </>

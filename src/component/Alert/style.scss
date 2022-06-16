@@ -1,0 +1,13 @@
+@import "../../style/main.scss";
+.alert {
+  padding: 40px;
+  color: $white;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.alert {
+  @include backGround-color-modifiers;
+}

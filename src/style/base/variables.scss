@@ -1,0 +1,31 @@
+$blue: #3399ff;
+$ligth-blue: #a9e4f1;
+$white: #fff;
+$dark: #333;
+$netural-light: #ccc;
+$success: #1dcf20;
+$error: #f91e0a;
+
+///////////size
+
+$small: 32px;
+$medium: 36px;
+$large: 40px;
+$xlarge: 50px;
+
+$colors: (
+  blue: $blue,
+  ligth-blue: $ligth-blue,
+  white: $white,
+  dark: $dark,
+  netural-light: $netural-light,
+  success: $success,
+  error: $error,
+);
+
+$size: (
+  small: $small,
+  medium: $medium,
+  large: $large,
+  xlarge: $xlarge,
+);

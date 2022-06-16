@@ -1,15 +1,21 @@
 import React, { FC } from "react";
 import { SelectOption } from "../../model/interfaces";
-import "./style.css";
+import Select, { ActionMeta, SingleValue } from "react-select";
+import "./style.scss";
+import { errorMessage } from "../../model/validation";
 interface SelectBoxProps {
   options?: SelectOption[];
-  onChange: React.ChangeEventHandler<HTMLSelectElement>;
-  value?: string;
+  onChange?: (
+    newValue: SingleValue<SelectOption>,
+    actionMeta: ActionMeta<SelectOption>
+  ) => void;
+  value?: string | number;
   label?: string;
   className?: string;
   name?: string;
   id?: string;
   invalidFeedack?: string;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
 }
 
 const SelectBox: FC<SelectBoxProps> = ({
@@ -17,28 +23,25 @@ const SelectBox: FC<SelectBoxProps> = ({
   onChange,
   value,
   label,
-  className,
   name,
   id,
   invalidFeedack,
+  onBlur,
 }) => {
   return (
-    <div className={`main-div-select ${className}`}>
-      <div className="select-lable-text">{label}:</div>
-      <div className="select-box">
-        <label>
-          <select onChange={onChange} value={value} name={name} id={id}>
-            <option value=""></option>
-            {options?.map((i) => (
-              <option value={i?.value} key={i?.value}>
-                {" "}
-                {i.label}{" "}
-              </option>
-            ))}
-          </select>
-        </label>
-        <div className="box-invalid-feedack">{invalidFeedack}</div>
-      </div>
+    <div className="select-box-box">
+      <label>
+        {label}:{invalidFeedack === errorMessage.require && "*"}
+      </label>
+      <Select
+        classNamePrefix="select-box"
+        options={options}
+        id={id}
+        name={name}
+        value={options?.find((op) => op.value === value)}
+        onChange={onChange}
+        onBlur={onBlur}
+      />
     </div>
   );
 };

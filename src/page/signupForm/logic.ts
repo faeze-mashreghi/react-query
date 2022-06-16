@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { useMutation, useQuery } from "react-query";
 import * as Yup from "yup";
 import { phoneRegExp, errorMessage } from "../../model/validation";
-import { Product } from "../../model/interfaces";
+import { Product } from "../../api/product/type";
 import { createOrder } from "../../api/order";
 import { getProduct } from "../../api/product";
 const Logic = () => {
