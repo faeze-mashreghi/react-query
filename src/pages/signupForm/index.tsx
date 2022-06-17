@@ -4,7 +4,7 @@ import Alert from "../../components/Alert/Alert";
 import Card from "../../components/Card/Card";
 import SelectBox from "../../components/SelectBox/SelectBox";
 
-import { SelectOption } from "../../model/interfaces";
+import { SelectOption } from "../../models/interfaces";
 import { SingleValue } from "react-select";
 import { changeToSelectType } from "../../utils";
 

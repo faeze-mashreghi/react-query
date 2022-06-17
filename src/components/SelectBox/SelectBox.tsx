@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { SelectOption } from "../../model/interfaces";
+import { SelectOption } from "../../models/interfaces";
 import Select, { ActionMeta, SingleValue } from "react-select";
 import "./SelectBox.scss";
-import { errorMessage } from "../../model/validation";
+import { errorMessage } from "../../models/validation";
 interface SelectBoxProps {
   options?: SelectOption[];
   onChange?: (

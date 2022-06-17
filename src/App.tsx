@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import SignupForm from "./page/signupForm";
+import SignupForm from "./pages/signupForm";
 function App() {
   const queryClient = new QueryClient();
 

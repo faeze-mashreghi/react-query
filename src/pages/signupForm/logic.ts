@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import { useMutation, useQuery } from "react-query";
 import * as Yup from "yup";
-import { phoneRegExp, errorMessage } from "../../model/validation";
+import { phoneRegExp, errorMessage } from "../../models/validation";
 import { Product } from "../../apis/product/type";
 import { createOrder } from "../../apis/order";
 import { getProduct } from "../../apis/product";

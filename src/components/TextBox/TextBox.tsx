@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { errorMessage } from "../../model/validation";
+import { errorMessage } from "../../models/validation";
 import { Size } from "../../style/type";
 import "./TextBox.scss";
 interface TextBoxProps {
