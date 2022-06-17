@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./style.scss";
+import "./Alert.scss";
 interface AlertProps {
   variant: "success" | "error";
 }

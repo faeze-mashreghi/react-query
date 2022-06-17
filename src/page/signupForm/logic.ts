@@ -3,15 +3,18 @@ import { useFormik } from "formik";
 import { useMutation, useQuery } from "react-query";
 import * as Yup from "yup";
 import { phoneRegExp, errorMessage } from "../../model/validation";
-import { Product } from "../../api/product/type";
-import { createOrder } from "../../api/order";
-import { getProduct } from "../../api/product";
+import { Product } from "../../apis/product/type";
+import { createOrder } from "../../apis/order";
+import { getProduct } from "../../apis/product";
 const Logic = () => {
   const [isCreateProduct, setIsCreateProduct] = useState<null | boolean>(null);
   const { data: product } = useQuery<Product[]>("getProduct", getProduct);
 
   const { mutate } = useMutation(createOrder, {
-    onSuccess: () => setIsCreateProduct(true),
+    onSuccess: () => {
+      setIsCreateProduct(true);
+      formik.resetForm();
+    },
     onError: () => setIsCreateProduct(false),
     onMutate: () =>
       setTimeout(() => {

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Size } from "../../style/type";
-import "./style.scss";
+import "./Button.scss";
 interface ButtonProps {
   lable: string;
   onclick?: React.MouseEventHandler<HTMLButtonElement>;

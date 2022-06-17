@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { SelectOption } from "../../model/interfaces";
 import Select, { ActionMeta, SingleValue } from "react-select";
-import "./style.scss";
+import "./SelectBox.scss";
 import { errorMessage } from "../../model/validation";
 interface SelectBoxProps {
   options?: SelectOption[];
@@ -38,7 +38,7 @@ const SelectBox: FC<SelectBoxProps> = ({
         options={options}
         id={id}
         name={name}
-        value={options?.find((op) => op.value === value)}
+        value={value ? options?.find((op) => op.value === value) : null}
         onChange={onChange}
         onBlur={onBlur}
       />

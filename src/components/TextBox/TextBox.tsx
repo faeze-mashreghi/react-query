@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { errorMessage } from "../../model/validation";
 import { Size } from "../../style/type";
-import "./style.scss";
+import "./TextBox.scss";
 interface TextBoxProps {
   value?: string | number | readonly string[];
   onChange: React.ChangeEventHandler<HTMLInputElement>;

@@ -1,19 +1,20 @@
-import TextBox from "../../component/TextBox";
-import Button from "../../component/Button";
-import Logic from "./logic";
-import "./style.scss";
-import Alert from "../../component/Alert";
-import { changeToSelectType } from "../../utils";
-import Card from "../../component/Card";
-import SelectBox from "../../component/SelectBox";
+import TextBox from "../../components/TextBox/TextBox";
+import Button from "../../components/Button/Button";
+import Alert from "../../components/Alert/Alert";
+import Card from "../../components/Card/Card";
+import SelectBox from "../../components/SelectBox/SelectBox";
+
 import { SelectOption } from "../../model/interfaces";
 import { SingleValue } from "react-select";
+import { changeToSelectType } from "../../utils";
 
+import Logic from "./logic";
+import "./style.scss";
 const SignupForm = () => {
   const { formik, product, isCreateProduct } = Logic();
 
   return (
-    <form onSubmit={formik.handleSubmit} className="form-signup">
+    <form onSubmit={formik.handleSubmit}>
       <Card>
         <div className="signup-box">
           <TextBox
